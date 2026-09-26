@@ -40,8 +40,8 @@ FitLog uses the following API:
 
 ## Live Project
 
-Live link will be added after deployment.
+https://b14-a6-fit-log-two-lake.vercel.app/
 
 ## GitHub Repository
 
-GitHub repository link will be added after deployment.
+https://github.com/mosfikur32/B14-A6-Fit-Log
