@@ -2,7 +2,18 @@
 
 import Link from "next/link";
 
-export default function WorkoutCard({ workout }) {
+type Workout = {
+  id: number;
+  name: string;
+  image: string;
+  muscleGroups: string[];
+  equipment: string;
+  duration: number;
+  caloriesBurned: number;
+  rating: number;
+};
+
+export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
     <Link
       href={`/workout/${workout.id}`}
@@ -20,7 +31,7 @@ export default function WorkoutCard({ workout }) {
       <div className="p-5">
         {/* Muscle group tags */}
         <div className="mb-3 flex flex-wrap gap-2">
-          {workout.muscleGroups?.map((muscle) => (
+          {workout.muscleGroups?.map((muscle: string) => (
             <span
               key={muscle}
               className="border border-[var(--border)] px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]"
